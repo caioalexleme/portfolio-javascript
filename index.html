@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Hello Word!!!</h1>
+    </header>
+
+    <section>
+        <div id="form1">
+            
+            <h2>Portfólio!</h2>
+
+        </div>
+    </section><br>
+    <section>
+        <h2>Operadores!</h2>
+        <div id="form2">
+            <p><input type="number" name="n1" id="n1" placeholder="Digite um número:"> 
+                <input type="number" name="n2" id="n2" placeholder="Digite outro número:"> = 
+                <input type="button" class="button" value="Somar" onclick="somarr()">
+                <input type="button" class="button" value="Subtrair" onclick="subtrair()">
+                <input type="button" class="button" value="Multiplicar" onclick="multiplicar()">
+                <input type="button" class="button" value="Dividir" onclick="dividir()">
+                <input type="button" class="button" value="Resto da divisão" onclick="rdivisao()">
+                </p>
+                
+            </div>
+    </section><br>
+    <section id="form3">
+        <div>
+            <h2>Maíusculas, minúsculas e números de caracteres!</h2>
+            <p><label for="nome">Digite o texto: </label></p>
+            
+            <p><input type="text" name="nome" id="nome">
+            <input type="button" id="buttonn" class="button" value="Verificar" onclick="nome()">
+            </p>
+        </div>
+        <div id="res">
+
+        </div>
+    </section><br>
+    <section id="form4">
+        <div>
+            <h2>Converta Real(R$) para Euro(&#x20AC;) e Dólar(US$)!</h2>
+            <p><input type="number" name="din" id="din">
+            <input type="button" class="button" value="Converter" onclick="converter()"></p>
+        </div>
+        <div id="res4">
+            
+        </div>
+    </section><br>
+    
+    <section>
+        <div>
+            <h2>Converta seu número flutuante de ponto para virgula e vice e versa, e limitando o número para (8) casas decimais!</h2>
+            <p><input type="number" name="numflu" id="numflu">
+            <input type="button" class="button" value="Inserir vírgula" onclick="virgula()">
+            <input type="button" class="button" value="Inserir ponto" onclick="ponto()">
+        </p>
+        </div>
+        <div id="resflu">
+
+        </div>
+    </section><br>
+
+    <section id="form5">
+        <h2>Eventos DOM!</h2>
+        <div id="area">Interaja...</div>
+    </section>
+    <style>
+        #area{
+            margin: auto;
+            background: green;
+            color: white;
+            width: 80%;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 28px;
+        }
+    </style><br>
+     <section id="form6">
+        <h2>Sistema de multas!</h2>
+
+        <p><input type="number" name="velp" id="velp" placeholder="Qual o limite? (km/h)">
+            <input type="number" name="vel" id="vel" placeholder="Você passou à: ">
+        <input type="button" class="button" value="Verificar" onclick="vervel()"> </p>
+
+        <div id="resvel">
+
+        </div>
+
+     </section><br>
+<section>
+    <h2>Será que você é brasileiro?</h2>
+    <p><input type="text" name="nac" id="nac" placeholder="Você nasceu em qual país?">
+    <input type="button" class="button" value="Verificar" onclick="nacionalidade()"></p>
+    <div id="resnac"></div>
+</section><br>
+<section>
+    <h2>Descubra o seu direito ao voto!</h2>
+   <p> <input type="number" name="idade" id="idade" placeholder="Qual sua idade?">
+    <input type="button" class="button" value="Verificar" onclick="voto()">
+</p>
+    <div id="resvoto"></div>
+
+</section><br>
+<section>
+    <h2>Descubra em qual período estamos!</h2>
+<p><input type="button" class="button" value="Verificar" onclick="per()"></p>
+<div id="reshora"></div>
+</section><br>
+<section>
+    <h2>Sabe que dia é hoje?</h2>
+    <p><input type="button" class="button" value="Verificar" onclick="dia()"></p>
+    <div id="resdia"></div>
+</section><br>
+<section>
+    <h2>Vamos criar 10 passos;</h2>
+   <p> <input type="button" class="button" value="Criar usando 'while'" onclick="passos()">
+    <input type="button" class="button" value="Criar usando 'do while'" onclick="passoss()">
+    <input type="button" class="button" value="Criar usando'for'" onclick="passosss()">
+</p>
+</section><br>
+<section>
+<h2>Digite sua nota e veja se foi aprovado!</h2>
+<p><input type="number" name="nota" id="nota" max="10" min="0">
+<input type="button" class="button" value="Verificar" onclick="notas()">
+</p>
+</section><br>
+<section>
+    <h2>Vetor: array = [9,4,7,3,5,2]</h2>
+    <p><input type="button" class="button" value="Apresentar valores" onclick="aprevalo()">
+    <input type="button" class="button" value="Nº de posições do array" onclick="npva()">
+    <input type="button" class="button" value="Trocar valor '7' na posição 2 pelo valor'6'" onclick="troval()"><br><br>
+    <input type="button" class="button" value="Exibir valor '2' que está na posição '6(5)'" onclick="p2()">
+    <input type="button" class="button" value="Inserir uma nova posição com o valor '8'" onclick="ins8()">
+    <input type="button" class="button" value="Ordenar valores no vetor" onclick="ordenar()"><br><br>
+    <input type="button" class="button" value="Exibir valores nas suas respectivas posições" onclick="evrp()"><br><br>
+    <input type="number" name="num" id="num" placeholder="Descubra em qual posição está algum valor!" style="width: 318px;">
+    <input type="button" class="button" value="Verificar" onclick="pv9()"></p>
+    <div id="resarray"></div>
+</section><br>
+<section>
+    <h2>Digite um nº e veja se ele é par ou ímpar!</h2>
+    <p><input type="number" name="number" id="number">
+    <input type="button" class="button" value="Verificar" onclick="parimp()"></p>
+    <div id="resparimp"></div>
+</section><br>
+<section>
+<h2>Somando números novamente (usando função com parâmetros)</h2>
+<p><input type="number" name="num1" id="num1" placeholder="0"> + <input type="number" name="num2" id="num2" placeholder="0">
+<input type="button" class="button" value="Somar" onclick="adicao()"></p>
+<div id="resoma"></div>
+</section><br>
+<section>
+    <h2>Adicionando função à variável!</h2>
+    <p>Digite o número e ele automaticamente será multiplicado por 2:</p>
+    <p><input type="number" name="numx" id="numx" placeholder="0">
+    <input type="button" class="button" value="Multiplicar por 2" onclick="mult()"></p>
+    <div id="resmult"></div>
+</section><br>
+<section>
+    <h2>Digite um número e descubra seu fatorial!</h2>
+    <p><input type="number" name="numfat" id="numfat">
+    <input type="button" class="button" value="Fatorial" onclick="fatorial()"></p>
+    <div id="resfat"></div>
+</section><br>
+<section>
+    <h2>Digite um nº e descubra seu fatorial! (usando recursividade)</h2>
+    <p><input type="number" name="numfato" id="numfato">
+    <input type="button" class="button" value="Fatorial" onclick="fatorialr()"></p>
+    <div id="resfatr"></div>
+</section><br>
+<section>
+<h2>Calculo de peso!</h2>
+<p><input type="text" name="name" id="name" placeholder="Qual seu nome? "></p>
+<p>Sexo: <input type="radio" name="sexo" id="masc" checked><label for="masc">Masculino</label>
+<input type="radio" name="sexo" id="femi"><label for="femi">Feminino</label></p> 
+<p><input type="number" name="pesos" id="pesos" placeholder="Qual seu peso?"></p>
+<p>Caso você engorde: <input type="number" name="gorda" id="gorda" placeholder="Kg"></p>
+<p><input type="button" class="button" value="Verificar" onclick="peso()"></p>
+<div id="respeso"></div>
+</section><br>
+<section id="form7">
+    <h2>Hora do dia!</h2>
+    <div id="p1"><p> Aqui vai aparecer a mensagem </p></div>
+    <div id="img"><img id="imagem" src="imagens/manha.png" alt="manhã" ></div>
+    
+</section><br>
+<section>
+    <h2>Validador de idade!</h2>
+    <p><label for="nasc">Ano de nascimento: </label> <input type="number" name="nasc" id="nasc" placeholder="Quatro dígitos! Ex:(YYYY)" style="width: 180px;"></p>
+    <p>Sexo: <input type="radio" name="sexoo" id="mas" checked>
+    <label for="mas">Masculino</label>
+    <input type="radio" name="sexoo" id="fem" >
+    <label for="fem">Feminino</label>
+    </p>
+    <p><input type="button" class="button" value="Verificar" onclick="idade()"></p>
+    <div id="residade">
+    <img id="foto"></div>
+</section><br>
+<section>
+    <h2>Super contador!</h2>
+    <p><label for="inicio">Início: </label> <input type="number" name="inicio" id="inicio"></p>
+    <p><label for="fim">Fim: </label> <input type="number" name="fim" id="fim"></p>
+    <p><label for="passo">Passo: </label> <input type="number" name="passo" id="passo"></p>
+    <p><input type="button" class="button" value="Contar" onclick="contar()"></p>
+    <div id="rescontar"></div>
+    
+</section><br>
+<section>
+    <h2>Tabuada!</h2>
+    <p><label for="numtab">Número: </label> <input type="number" name="numtab" id="numtab"></p> 
+    <p><input type="button" class="button" value="Gerar" onclick="tabuada()"></p>
+        <p><select id="select" size="10"></select></p>
+</section><br>
+<section>
+        <h2>Analisador de números!</h2>
+        <p><label for="n100">Número entre 1 e 100: </label> <input type="number" name="n100" id="n100"></p>
+        <p><input type="button" class="button" value="Adicionar" onclick="adicionar()"></p>
+        <p><select id="lista" size="8">
+
+        </select></p>
+        <p><input type="button" class="button" value="Finalizar" onclick="analisar()"></p>
+<div id="resanalisador"></div>
+
+</section>
+
+
+    <footer id="footer"></footer>
+
+    <script src="scrip.js"></script>
+</body>
+</html>
