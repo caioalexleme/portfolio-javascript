@@ -50,8 +50,8 @@ input{
    /* font-family: 'Merienda', cursive;
     font-size: .56em; */
     font: normal .56em 'Merienda', cursive;
-    border-radius: 10px;
-        
+    border-radius: 5px;
+           
 }
 
 .button{
