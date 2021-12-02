@@ -238,8 +238,9 @@
 
     <footer id="footer"></footer>
 
-    <script>
-            var buttons = document.getElementById('buttonn')
+<script>
+    
+    var buttons = document.getElementById('buttonn')
     buttons.addEventListener('click', click)
     buttons.addEventListener('mouseout', exit)
     buttons.addEventListener('mouseover', entraa)
@@ -561,6 +562,12 @@ function dia(){
      let mes = data.getMonth()
      let ano = data.getFullYear()
     mes += 1
+    if (dia < 10){
+        dia = '0' + dia
+    }
+    if (mes < 10){
+        mes = '0' + mes
+    }
     switch(dias){
         case 0:
             res.innerHTML = `<p>Domingo! ${dia}/${mes}/${ano}</p>`
