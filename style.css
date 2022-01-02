@@ -1,13 +1,15 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Chango&family=Merienda&display=swap');
 
-
-
+:root{
+    --cor1:#8ceaf3e8;
+    --cor2:#EDD2B3;
+}
 
 body{
-    width: 93%;
+    width: 70%;
     margin: auto;
-    background-image: linear-gradient(to right, #8ceaf3e8, #EDD2B3);
+    background-image: linear-gradient(to right, var(--cor1), var(--cor2));
     
     
 }
