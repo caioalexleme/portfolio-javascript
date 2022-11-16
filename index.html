@@ -230,7 +230,9 @@
         <p><select id="lista" size="8">
 
         </select></p>
-        <p><input type="button" class="button" value="Finalizar" onclick="analisar()"></p>
+        <p><input type="button" class="button" value="Finalizar" onclick="analisar()">
+            <input type="button" class="button" value="Limpar" onclick="limpar()"></p>
+            <div id="resanalisador"></p>
 <div id="resanalisador"></div>
 
 </section>
@@ -501,11 +503,13 @@ n2.value = ''
 function nacionalidade(){
     nac = document.getElementById('nac')
     res = document.getElementById('resnac')
+    naccc = nac.value.toLowerCase()
+    
     if(nac.value.length == 0){
         alert('Preencha em qual país você nasceu!')
         res.innerHTML = ''
     }
-    else if(String(nac.value) == 'Brasil' || String(nac.value) == 'brasil' || String(nac.value) == 'BRASIL'){
+    else if(String(naccc.value) == 'Brasil' || naccc == 'brasil' || String(naccc.value) == 'BRASIL'){
         res.innerHTML = '<p>Você é brasileiro!</p>'
     }else{
         res.innerHTML = '<p>Você é estrangeiro!</p>'
@@ -517,7 +521,11 @@ function voto(){
     let idade = Number(document.getElementById('idade').value)
     res = document.getElementById('resvoto')
     n1 = document.getElementById('idade')
-    if(idade <16){
+    if(idade < 0 || idade > 130){
+        alert('Você nem existe!')
+        res.innerHTML = ''
+    }
+    else if(idade <16){
         res.innerHTML = `<p>Você tem ${idade} anos de idade. Não vota!</p>`
     }else if(idade<18 || idade >=65){
         res.innerHTML = `<p>Você tem ${idade} anos de idade. Voto opcional!</p>`
@@ -974,6 +982,11 @@ function analisar(){
     }
 }
 
+function limpar(){
+    valores = []
+    resanalisador.innerHTML = ''
+    lista.innerHTML = ''
+}
     
 
 
